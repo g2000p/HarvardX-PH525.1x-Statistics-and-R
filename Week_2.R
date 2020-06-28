@@ -250,7 +250,7 @@ mean(Y)
 35.8036
 
 #Population, Samples, and Estimates Exercises #7
-#Q: What is the difference in absolute value between  y¯-x¯  and  Y¯-X¯ ?
+#Q: What is the difference in absolute value between  yÂ¯-xÂ¯  and  YÂ¯-XÂ¯ ?
 
 p<-mean(Y)-mean(X)
 q<-mean(b)-mean(y)
@@ -260,7 +260,7 @@ abs(p-q)
 
 #Population, Samples, and Estimates Exercises #8
 #Q: Repeat the above for females, this time setting the seed to 2.
-#   What is the difference in absolute value between  y¯-x¯  and  Y¯-X¯ ?
+#   What is the difference in absolute value between  yÂ¯-xÂ¯  and  YÂ¯-XÂ¯ ?
 
 0.3647172
 
@@ -474,7 +474,7 @@ Y <- filter(dat, Diet=="hf") %>% select(Bodyweight) %>% unlist
 #   We think of  X  as a random sample from the population of all mice in the control diet and  Y  as a random sample from the population of all mice
 #   in the high fat diet.
 
-#   Define the parameter  µX  as the average of the control population. We estimate this parameter with the sample average  X¯ . What is the sample
+#   Define the parameter  ÂµX  as the average of the control population. We estimate this parameter with the sample average  XÂ¯ . What is the sample
 #   average?
 
 mean(X)
@@ -482,12 +482,12 @@ mean(X)
 23.81333
 
 #CLT and t-distribution in Practice Exercises #4
-#Q: We don't know  µX  , but want to use  X¯  to understand  µX . Which of the following uses CLT to understand how well  X¯  approximates  µX  ?
+#Q: We don't know  ÂµX  , but want to use  XÂ¯  to understand  ÂµX . Which of the following uses CLT to understand how well  XÂ¯  approximates  ÂµX  ?
 
-#>> X¯  follows a normal distribution with mean  µX  and standard deviation  sX12v  where  sX  is the population standard deviation.
+#>> XÂ¯  follows a normal distribution with mean  ÂµX  and standard deviation  sX12v  where  sX  is the population standard deviation.
 
 #CLT and t-distribution in Practice Exercises #5
-#Q: The result above tells us the distribution of the following random variable:  Z=12--vX¯-µXsX . What does the CLT tell us is the mean of  Z  (you
+#Q: The result above tells us the distribution of the following random variable:  Z=12--vXÂ¯-ÂµXsX . What does the CLT tell us is the mean of  Z  (you
 #   don't need code)?
 
 0
@@ -503,28 +503,28 @@ sd(X)
 3.022541
 
 #CLT and t-distribution in Practice Exercises #7
-#Q: Use the CLT to approximate the probability that our estimate  X¯  is off by more than 2 grams from  µX.
+#Q: Use the CLT to approximate the probability that our estimate  XÂ¯  is off by more than 2 grams from  ÂµX.
 
 2 * ( 1-pnorm(2/sd(X) * sqrt(12) ) )
 
 0.02189533
 
 #CLT and t-distribution in Practice Exercises #8
-#Q: Now we introduce the concept of a null hypothesis. We don't know  µX  nor  µY . We want to quantify what the data say about the possibility that
-#   the diet has no effect:  µX=µY . If we use CLT, then we approximate the distribution of  X¯  as normal with mean  µX  and standard deviation
-#   sX/M--v  and the distribution of  Y¯  as normal with mean  µY  and standard deviation  sY/N--v , with  M and N  the sample sizes for  X and Y
-#   respectively, in this case 12. This implies that the difference  Y¯-X¯  has mean  0 . We described that the standard deviation of this statistic (the
-#   standard error) is  SE(X¯-Y¯)=s2Y/12+s2X/12------------v  and that we estimate the population standard deviations  sX  and  sY  with the sample
+#Q: Now we introduce the concept of a null hypothesis. We don't know  ÂµX  nor  ÂµY . We want to quantify what the data say about the possibility that
+#   the diet has no effect:  ÂµX=ÂµY . If we use CLT, then we approximate the distribution of  XÂ¯  as normal with mean  ÂµX  and standard deviation
+#   sX/M--v  and the distribution of  YÂ¯  as normal with mean  ÂµY  and standard deviation  sY/N--v , with  M and N  the sample sizes for  X and Y
+#   respectively, in this case 12. This implies that the difference  YÂ¯-XÂ¯  has mean  0 . We described that the standard deviation of this statistic (the
+#   standard error) is  SE(XÂ¯-YÂ¯)=s2Y/12+s2X/12------------v  and that we estimate the population standard deviations  sX  and  sY  with the sample
 #   estimates.
 
-#   What is the estimate of  SE(X¯-Y¯)=s2Y/12+s2X/12------------v  ?
+#   What is the estimate of  SE(XÂ¯-YÂ¯)=s2Y/12+s2X/12------------v  ?
 
 sqrt( var(X)/12 + var(Y)/12)
 
 1.469867
 
 #CLT and t-distribution in Practice Exercises #9
-#Q: So now we can compute  Y¯-X¯  as well as an estimate of this standard error and construct a t-statistic. What number is this t-statistic?
+#Q: So now we can compute  YÂ¯-XÂ¯  as well as an estimate of this standard error and construct a t-statistic. What number is this t-statistic?
 
 t.test(Y,X)$stat
 
@@ -565,23 +565,6 @@ t.test(X,Y)$p.value
 #   thus, under the null, large values are more probable under the null distribution.
 
 #--------------------------------------------------------------------------------END-------------------------------------------------------------------------#
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
